@@ -16,6 +16,9 @@
 		0B1117C82AA01F600000B869 /* ChallengeOnboardingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117C72AA01F600000B869 /* ChallengeOnboardingUITests.swift */; };
 		0B1117CA2AA01F600000B869 /* ChallengeOnboardingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117C92AA01F600000B869 /* ChallengeOnboardingUITestsLaunchTests.swift */; };
 		0B1117D82AA020B10000B869 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117D72AA020B10000B869 /* LoginScreen.swift */; };
+		0B1117DE2AA023F00000B869 /* DS+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117DA2AA023F00000B869 /* DS+Colors.swift */; };
+		0B1117DF2AA023F00000B869 /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117DB2AA023F00000B869 /* DS.swift */; };
+		0B1117E02AA023F00000B869 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117DD2AA023F00000B869 /* UIColor+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0B1117C72AA01F600000B869 /* ChallengeOnboardingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOnboardingUITests.swift; sourceTree = "<group>"; };
 		0B1117C92AA01F600000B869 /* ChallengeOnboardingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOnboardingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0B1117D72AA020B10000B869 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		0B1117DA2AA023F00000B869 /* DS+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DS+Colors.swift"; sourceTree = "<group>"; };
+		0B1117DB2AA023F00000B869 /* DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
+		0B1117DD2AA023F00000B869 /* UIColor+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 		0B1117A52AA01F5F0000B869 /* ChallengeOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0B1117D92AA023F00000B869 /* DesignSystem */,
+				0B1117DC2AA023F00000B869 /* Utils */,
 				0B1117D62AA0209F0000B869 /* Login */,
 				0B1117A62AA01F5F0000B869 /* AppDelegate.swift */,
 				0B1117A82AA01F5F0000B869 /* SceneDelegate.swift */,
@@ -133,6 +141,23 @@
 				0B1117AA2AA01F5F0000B869 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		0B1117D92AA023F00000B869 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				0B1117DA2AA023F00000B869 /* DS+Colors.swift */,
+				0B1117DB2AA023F00000B869 /* DS.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		0B1117DC2AA023F00000B869 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0B1117DD2AA023F00000B869 /* UIColor+ext.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +292,10 @@
 			files = (
 				0B1117AB2AA01F5F0000B869 /* LoginViewController.swift in Sources */,
 				0B1117D82AA020B10000B869 /* LoginScreen.swift in Sources */,
+				0B1117DF2AA023F00000B869 /* DS.swift in Sources */,
+				0B1117DE2AA023F00000B869 /* DS+Colors.swift in Sources */,
 				0B1117A72AA01F5F0000B869 /* AppDelegate.swift in Sources */,
+				0B1117E02AA023F00000B869 /* UIColor+ext.swift in Sources */,
 				0B1117A92AA01F5F0000B869 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
