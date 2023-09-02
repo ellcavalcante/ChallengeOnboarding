@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func actionRegisterButton()
+    func actionSignInButton()
+
+}
+
 class LoginScreen: UIView {
+    
+    private weak var delegate: LoginScreenProtocol?
+    func delegate(delegate: LoginScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     public lazy var scroll: UIScrollView = {
         let scroll = UIScrollView()
@@ -51,9 +62,13 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 23.5
         button.backgroundColor = UIColor(red: 93/255, green: 211/255, blue: 158/255, alpha: 1.0)
-//        button.addTarget(self, action: #selector(tappedSignInButtonButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tappedRegisterButton() {
+        delegate?.actionRegisterButton()
+    }
     
     public lazy var signInButton: UIButton = {
         let button = UIButton()
@@ -66,10 +81,13 @@ class LoginScreen: UIView {
         button.layer.borderWidth = 2.0
         button.layer.borderColor = UIColor(red: 93/255, green: 211/255, blue: 158/255, alpha: 1.0).cgColor
         button.backgroundColor = UIColor(red: 232/255, green: 247/255, blue: 252/255, alpha: 1.0)
-//        button.addTarget(self, action: #selector(tappedSignInButtonButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedSignInButton), for: .touchUpInside)
         return button
     }()
-
+    
+    @objc func tappedSignInButton() {
+        delegate?.actionSignInButton()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -111,7 +129,7 @@ class LoginScreen: UIView {
             conteinerView.heightAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.heightAnchor),
             conteinerView.widthAnchor.constraint(equalTo: scroll.widthAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 66),
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 6),
             titleLabel.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor, constant: 22),
             titleLabel.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -22),
             
@@ -119,7 +137,7 @@ class LoginScreen: UIView {
             subTitleLabel.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor, constant: 22),
             subTitleLabel.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -22),
             
-            registerButton.bottomAnchor.constraint(equalTo: conteinerView.bottomAnchor, constant: -143),
+            registerButton.bottomAnchor.constraint(equalTo: conteinerView.bottomAnchor, constant: -103),
             registerButton.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor, constant: 71),
             registerButton.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -71),
             registerButton.heightAnchor.constraint(equalToConstant: 44),

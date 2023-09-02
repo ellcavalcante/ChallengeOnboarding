@@ -19,6 +19,12 @@
 		0B1117DE2AA023F00000B869 /* DS+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117DA2AA023F00000B869 /* DS+Colors.swift */; };
 		0B1117DF2AA023F00000B869 /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117DB2AA023F00000B869 /* DS.swift */; };
 		0B1117E02AA023F00000B869 /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1117DD2AA023F00000B869 /* UIColor+ext.swift */; };
+		0B408A0F2AA2D41B00D399E7 /* Onboarding1Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B408A0E2AA2D41B00D399E7 /* Onboarding1Screen.swift */; };
+		0B408A112AA2D42D00D399E7 /* Onboarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B408A102AA2D42D00D399E7 /* Onboarding1ViewController.swift */; };
+		0BA9FE602AA365BD00D0F085 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE5F2AA365BD00D0F085 /* Onboarding2ViewController.swift */; };
+		0BA9FE622AA365D400D0F085 /* Onboarding2Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE612AA365D400D0F085 /* Onboarding2Screen.swift */; };
+		0BA9FE652AA37A1800D0F085 /* Onboarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE642AA37A1800D0F085 /* Onboarding3ViewController.swift */; };
+		0BA9FE672AA37A5D00D0F085 /* Onboarding3Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE662AA37A5D00D0F085 /* Onboarding3Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		0B1117DA2AA023F00000B869 /* DS+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DS+Colors.swift"; sourceTree = "<group>"; };
 		0B1117DB2AA023F00000B869 /* DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
 		0B1117DD2AA023F00000B869 /* UIColor+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		0B408A0E2AA2D41B00D399E7 /* Onboarding1Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1Screen.swift; sourceTree = "<group>"; };
+		0B408A102AA2D42D00D399E7 /* Onboarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1ViewController.swift; sourceTree = "<group>"; };
+		0BA9FE5F2AA365BD00D0F085 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
+		0BA9FE612AA365D400D0F085 /* Onboarding2Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2Screen.swift; sourceTree = "<group>"; };
+		0BA9FE642AA37A1800D0F085 /* Onboarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3ViewController.swift; sourceTree = "<group>"; };
+		0BA9FE662AA37A5D00D0F085 /* Onboarding3Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,9 @@
 			children = (
 				0B1117D92AA023F00000B869 /* DesignSystem */,
 				0B1117DC2AA023F00000B869 /* Utils */,
+				0BA9FE632AA379ED00D0F085 /* Onboarding3 */,
+				0BA9FE5E2AA3658000D0F085 /* Onboarding2 */,
+				0B408A0D2AA2D3F800D399E7 /* Onboarding1 */,
 				0B1117D62AA0209F0000B869 /* Login */,
 				0B1117A62AA01F5F0000B869 /* AppDelegate.swift */,
 				0B1117A82AA01F5F0000B869 /* SceneDelegate.swift */,
@@ -158,6 +173,33 @@
 				0B1117DD2AA023F00000B869 /* UIColor+ext.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0B408A0D2AA2D3F800D399E7 /* Onboarding1 */ = {
+			isa = PBXGroup;
+			children = (
+				0B408A0E2AA2D41B00D399E7 /* Onboarding1Screen.swift */,
+				0B408A102AA2D42D00D399E7 /* Onboarding1ViewController.swift */,
+			);
+			path = Onboarding1;
+			sourceTree = "<group>";
+		};
+		0BA9FE5E2AA3658000D0F085 /* Onboarding2 */ = {
+			isa = PBXGroup;
+			children = (
+				0BA9FE612AA365D400D0F085 /* Onboarding2Screen.swift */,
+				0BA9FE5F2AA365BD00D0F085 /* Onboarding2ViewController.swift */,
+			);
+			path = Onboarding2;
+			sourceTree = "<group>";
+		};
+		0BA9FE632AA379ED00D0F085 /* Onboarding3 */ = {
+			isa = PBXGroup;
+			children = (
+				0BA9FE662AA37A5D00D0F085 /* Onboarding3Screen.swift */,
+				0BA9FE642AA37A1800D0F085 /* Onboarding3ViewController.swift */,
+			);
+			path = Onboarding3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,11 +333,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1117AB2AA01F5F0000B869 /* LoginViewController.swift in Sources */,
+				0BA9FE672AA37A5D00D0F085 /* Onboarding3Screen.swift in Sources */,
+				0BA9FE622AA365D400D0F085 /* Onboarding2Screen.swift in Sources */,
 				0B1117D82AA020B10000B869 /* LoginScreen.swift in Sources */,
 				0B1117DF2AA023F00000B869 /* DS.swift in Sources */,
+				0B408A112AA2D42D00D399E7 /* Onboarding1ViewController.swift in Sources */,
 				0B1117DE2AA023F00000B869 /* DS+Colors.swift in Sources */,
 				0B1117A72AA01F5F0000B869 /* AppDelegate.swift in Sources */,
+				0BA9FE652AA37A1800D0F085 /* Onboarding3ViewController.swift in Sources */,
 				0B1117E02AA023F00000B869 /* UIColor+ext.swift in Sources */,
+				0B408A0F2AA2D41B00D399E7 /* Onboarding1Screen.swift in Sources */,
+				0BA9FE602AA365BD00D0F085 /* Onboarding2ViewController.swift in Sources */,
 				0B1117A92AA01F5F0000B869 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
