@@ -14,10 +14,7 @@ protocol Onboarding2ScreenProtocol: AnyObject {
 
 class Onboarding2Screen: UIView {
     
-    private weak var delegate: Onboarding2ScreenProtocol?
-    func delegate(delegate: Onboarding2ScreenProtocol?) {
-        self.delegate = delegate
-    }
+    weak var delegate: Onboarding2ScreenProtocol?
     
     private lazy var view: UIView = {
         let view = UIView()
@@ -42,7 +39,7 @@ class Onboarding2Screen: UIView {
         button.addTarget(self, action: #selector(tappedskipButton), for: .touchUpInside)
         return button
     }()
-    
+
     @objc func tappedskipButton() {
         delegate?.actionSkipButton()
     }

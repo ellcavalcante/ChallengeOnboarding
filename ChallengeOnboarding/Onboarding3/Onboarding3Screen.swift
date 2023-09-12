@@ -13,10 +13,7 @@ protocol Onboarding3ScreenProtocol: AnyObject {
 
 class Onboarding3Screen: UIView {
     
-    private weak var delegate: Onboarding3ScreenProtocol?
-    func delegate(delegate: Onboarding3ScreenProtocol?) {
-        self.delegate = delegate
-    }
+    weak var delegate: Onboarding3ScreenProtocol?
     
     private lazy var view: UIView = {
         let view = UIView()

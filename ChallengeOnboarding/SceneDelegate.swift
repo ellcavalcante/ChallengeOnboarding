@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let onBoarding1 = Onboarding1ViewController()
-        let navVC = UINavigationController(rootViewController: onBoarding1)
+        let onBoarding = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        let navVC = UINavigationController(rootViewController: onBoarding)
         window.rootViewController = navVC
         window.makeKeyAndVisible()
         self.window = window

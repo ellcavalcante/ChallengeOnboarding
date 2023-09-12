@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol Onboarding2ViewControllerProtocol: AnyObject {
+    func actionOnBoarding2ArrowButton()
+    func actionOnBoarding2SkipButton()
+}
+
 class Onboarding2ViewController: UIViewController {
 
     var screen: Onboarding2Screen?
+    weak var delegate: Onboarding2ViewControllerProtocol?
     
     override func loadView() {
         screen = Onboarding2Screen()
@@ -18,43 +24,21 @@ class Onboarding2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.delegate(delegate: self)
-        swipeRight()
+        screen?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    
-    private func swipeRight() {
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeFuncRight(_:)))
-        swipeRight.direction = .right
-        screen?.addGestureRecognizer(swipeRight)
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeFuncLeft(_:)))
-        swipeLeft.direction = .left
-        screen?.addGestureRecognizer(swipeLeft)
-    }
-    
-    @objc func swipeFuncRight(_ gesture: UIGestureRecognizer) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @objc func swipeFuncLeft(_ gesture: UIGestureRecognizer) {
-        let onBoarding3: Onboarding3ViewController = Onboarding3ViewController()
-        navigationController?.pushViewController(onBoarding3, animated: true)
-    }
 }
 
 extension Onboarding2ViewController: Onboarding2ScreenProtocol {
     func actionArrowButton() {
-        let onBoarding3: Onboarding3ViewController = Onboarding3ViewController()
-        navigationController?.pushViewController(onBoarding3, animated: true)
+        delegate?.actionOnBoarding2ArrowButton()
     }
-    
+
     func actionSkipButton() {
-        let welcome: LoginViewController = LoginViewController()
-        navigationController?.pushViewController(welcome, animated: true)
+        delegate?.actionOnBoarding2SkipButton()
     }
 }

@@ -8,16 +8,13 @@
 import UIKit
 
 protocol Onboarding1ScreenProtocol: AnyObject {
-    func actionSkipButton()
-    func actionArrowButton()
+    func actionOnBoarding1SkipButton()
+    func actionOnBoardingArrowButton()
 }
 
 class Onboarding1Screen: UIView {
     
-    private weak var delegate: Onboarding1ScreenProtocol?
-    func delegate(delegate: Onboarding1ScreenProtocol?) {
-        self.delegate = delegate
-    }
+    weak var delegate: Onboarding1ScreenProtocol?
     
     private lazy var view: UIView = {
         let view = UIView()
@@ -38,13 +35,13 @@ class Onboarding1Screen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("pular", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor(red: 232/255, green: 247/255, blue: 252/255, alpha: 1.0), for: .normal)
         button.addTarget(self, action: #selector(tappedskipButton), for: .touchUpInside)
         return button
     }()
-    
+
     @objc func tappedskipButton() {
-        delegate?.actionSkipButton()
+        delegate?.actionOnBoarding1SkipButton()
     }
     
     private lazy var titleLabel: UILabel = {
@@ -83,7 +80,7 @@ class Onboarding1Screen: UIView {
     }()
     
     @objc func tappedArrowButton() {
-        delegate?.actionArrowButton()
+        delegate?.actionOnBoardingArrowButton()
     }
 
     override init(frame: CGRect) {
@@ -139,5 +136,4 @@ class Onboarding1Screen: UIView {
 
         ])
     }
-    
 }

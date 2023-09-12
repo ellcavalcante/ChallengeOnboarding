@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol Onboarding1ViewControllerProtocol: AnyObject {
+    func actionOnBoarding1ArrowButton()
+    func actionOnBoarding1SkipButton()
+}
+
 class Onboarding1ViewController: UIViewController {
     
     var screen: Onboarding1Screen?
+    weak var delegate: Onboarding1ViewControllerProtocol?
     
     override func loadView() {
         screen = Onboarding1Screen()
@@ -18,37 +24,21 @@ class Onboarding1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.delegate(delegate: self)
-        swipeGesture()
-     
+        screen?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    
-    private func swipeGesture() {
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeFuncLeft(_:)))
-        swipeLeft.direction = .left
-        screen?.addGestureRecognizer(swipeLeft)
-    }
-    
-    @objc func swipeFuncLeft(_ gesture: UIGestureRecognizer) {
-        let onBoarding2: Onboarding2ViewController = Onboarding2ViewController()
-        navigationController?.pushViewController(onBoarding2, animated: true)
-    }
 }
 
 extension Onboarding1ViewController: Onboarding1ScreenProtocol {
-    func actionArrowButton() {
-        let onBoarding2: Onboarding2ViewController = Onboarding2ViewController()
-        navigationController?.pushViewController(onBoarding2, animated: true)
+    func actionOnBoardingArrowButton() {
+        delegate?.actionOnBoarding1ArrowButton()
     }
-    
-    func actionSkipButton() {
-        let welcome: LoginViewController = LoginViewController()
-        navigationController?.pushViewController(welcome, animated: true)
+
+    func actionOnBoarding1SkipButton() {
+        delegate?.actionOnBoarding1SkipButton()
     }
 }
