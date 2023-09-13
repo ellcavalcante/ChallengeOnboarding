@@ -26,6 +26,7 @@ class Onboarding3Screen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "imagem3")
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -43,10 +44,10 @@ class Onboarding3Screen: UIView {
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Com o nosso app, suas tarefas viram \nconquistas. Acompanhe seu progresso, marque \nitens concluídos e sinta a satisfação de ver \nsuas metas se tornarem realidade. Este é o \ncomeço de uma jornada mais produtiva e \nrealizadora!"
+        label.text = "Com o nosso app, suas tarefas viram \nconquistas. Acompanhe seu progresso, marque itens concluídos e sinta a satisfação de ver suas metas se tornarem realidade. Este é o começo de uma jornada mais produtiva e realizadora!"
         label.textColor = .black
         label.numberOfLines = 0
-        label.textAlignment = .left
+        label.textAlignment = .justified
         label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
@@ -67,7 +68,7 @@ class Onboarding3Screen: UIView {
     @objc func tappedbeginButton() {
         delegate?.actionBeginButton()
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview()
@@ -97,12 +98,14 @@ class Onboarding3Screen: UIView {
             view.topAnchor.constraint(equalTo: topAnchor),
             view.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            view.heightAnchor.constraint(equalToConstant: 530),
-        
-            topImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            topImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30),
+            view.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -25),
             
-            titleLabel.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 22),
+            topImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            topImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            
+            titleLabel.topAnchor.constraint(equalTo: beginButton.topAnchor, constant: -200),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
             
@@ -111,10 +114,10 @@ class Onboarding3Screen: UIView {
             subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
             
             beginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
-            beginButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            beginButton.topAnchor.constraint(equalTo: bottomAnchor, constant: -97),
             beginButton.heightAnchor.constraint(equalToConstant: 44),
             beginButton.widthAnchor.constraint(equalToConstant: 167),
-
+            
         ])
     }
 }

@@ -22,7 +22,7 @@
 		0B1CE61F2AA6879400703388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1CE61E2AA6879400703388 /* ViewController.swift */; };
 		0B408A0F2AA2D41B00D399E7 /* Onboarding1Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B408A0E2AA2D41B00D399E7 /* Onboarding1Screen.swift */; };
 		0B408A112AA2D42D00D399E7 /* Onboarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B408A102AA2D42D00D399E7 /* Onboarding1ViewController.swift */; };
-		0B802A3F2AAFF6460081BB82 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B802A3E2AAFF6460081BB82 /* Utils.swift */; };
+		0B802A3F2AAFF6460081BB82 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B802A3E2AAFF6460081BB82 /* UserDefaults.swift */; };
 		0BA9FE602AA365BD00D0F085 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE5F2AA365BD00D0F085 /* Onboarding2ViewController.swift */; };
 		0BA9FE622AA365D400D0F085 /* Onboarding2Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE612AA365D400D0F085 /* Onboarding2Screen.swift */; };
 		0BA9FE652AA37A1800D0F085 /* Onboarding3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9FE642AA37A1800D0F085 /* Onboarding3ViewController.swift */; };
@@ -66,7 +66,7 @@
 		0B1CE61E2AA6879400703388 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B408A0E2AA2D41B00D399E7 /* Onboarding1Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1Screen.swift; sourceTree = "<group>"; };
 		0B408A102AA2D42D00D399E7 /* Onboarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1ViewController.swift; sourceTree = "<group>"; };
-		0B802A3E2AAFF6460081BB82 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0B802A3E2AAFF6460081BB82 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		0BA9FE5F2AA365BD00D0F085 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
 		0BA9FE612AA365D400D0F085 /* Onboarding2Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2Screen.swift; sourceTree = "<group>"; };
 		0BA9FE642AA37A1800D0F085 /* Onboarding3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3ViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1117DD2AA023F00000B869 /* UIColor+ext.swift */,
-				0B802A3E2AAFF6460081BB82 /* Utils.swift */,
+				0B802A3E2AAFF6460081BB82 /* UserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				0BA9FE622AA365D400D0F085 /* Onboarding2Screen.swift in Sources */,
 				0B1117D82AA020B10000B869 /* LoginScreen.swift in Sources */,
 				0B1CE61F2AA6879400703388 /* ViewController.swift in Sources */,
-				0B802A3F2AAFF6460081BB82 /* Utils.swift in Sources */,
+				0B802A3F2AAFF6460081BB82 /* UserDefaults.swift in Sources */,
 				0B1117DF2AA023F00000B869 /* DS.swift in Sources */,
 				0B408A112AA2D42D00D399E7 /* Onboarding1ViewController.swift in Sources */,
 				0B1117DE2AA023F00000B869 /* DS+Colors.swift in Sources */,

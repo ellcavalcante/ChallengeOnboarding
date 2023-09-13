@@ -12,7 +12,7 @@ protocol Onboarding3ViewControllerProtocol: AnyObject {
 }
 
 class Onboarding3ViewController: UIViewController {
-
+    
     var screen: Onboarding3Screen?
     weak var delegate: Onboarding3ViewControllerProtocol?
     
@@ -20,7 +20,7 @@ class Onboarding3ViewController: UIViewController {
         screen = Onboarding3Screen()
         view = screen
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate = self

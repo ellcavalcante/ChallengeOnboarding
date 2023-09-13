@@ -14,21 +14,17 @@ class ViewController: UIPageViewController {
     let nextScreenButton = UIButton()
     let initialPage = 0
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         style()
         layout()
-        
-        Utils.setFirstAccess(value: true)
-        
     }
     
     private func goToNextPage(animated: Bool = true, completion: ((Bool) -> Void)? = nil) {
         guard let currentPage = viewControllers?[0] else { return }
         guard let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentPage) else { return }
-
+        
         setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
     }
     
@@ -46,6 +42,7 @@ extension ViewController: Onboarding1ViewControllerProtocol {
     }
     
     func actionOnBoarding1SkipButton() {
+        UserDefaults.standard.notTheFirstAccess = true
         gotToWelcomePage()
     }
 }
@@ -57,12 +54,14 @@ extension ViewController: Onboarding2ViewControllerProtocol {
     }
     
     func actionOnBoarding2SkipButton() {
+        UserDefaults.standard.notTheFirstAccess = true
         gotToWelcomePage()
     }
 }
 
 extension ViewController: Onboarding3ViewControllerProtocol {
     func actionBeginButton() {
+        UserDefaults.standard.notTheFirstAccess = true
         gotToWelcomePage()
     }
 }
@@ -130,10 +129,10 @@ extension ViewController: UIPageViewControllerDataSource {
 
 extension ViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-
+        
         guard let viewControllers = pageViewController.viewControllers else { return }
         guard let currentIndex = pages.firstIndex(of: viewControllers[0]) else { return }
-
+        
         pageControl.currentPage = currentIndex
     }
 }

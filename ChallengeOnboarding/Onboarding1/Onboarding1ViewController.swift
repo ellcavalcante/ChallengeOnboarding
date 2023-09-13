@@ -21,7 +21,7 @@ class Onboarding1ViewController: UIViewController {
         screen = Onboarding1Screen()
         view = screen
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate = self
@@ -37,7 +37,7 @@ extension Onboarding1ViewController: Onboarding1ScreenProtocol {
     func actionOnBoardingArrowButton() {
         delegate?.actionOnBoarding1ArrowButton()
     }
-
+    
     func actionOnBoarding1SkipButton() {
         delegate?.actionOnBoarding1SkipButton()
     }

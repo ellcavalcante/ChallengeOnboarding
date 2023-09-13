@@ -16,8 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let onBoarding = ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        let onBoarding2 = LoginViewController()
         let navVC = UINavigationController(rootViewController: onBoarding)
-        window.rootViewController = navVC
+        let navVC2 = UINavigationController(rootViewController: onBoarding2)
+        if UserDefaults.standard.notTheFirstAccess {
+            window.rootViewController = navVC2
+        } else {
+            window.rootViewController = navVC
+        }
         window.makeKeyAndVisible()
         self.window = window
     }

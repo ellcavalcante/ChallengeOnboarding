@@ -27,6 +27,7 @@ class Onboarding2Screen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "imagem2")
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -39,7 +40,7 @@ class Onboarding2Screen: UIView {
         button.addTarget(self, action: #selector(tappedskipButton), for: .touchUpInside)
         return button
     }()
-
+    
     @objc func tappedskipButton() {
         delegate?.actionSkipButton()
     }
@@ -82,7 +83,7 @@ class Onboarding2Screen: UIView {
     @objc func tappedArrowButton() {
         delegate?.actionArrowButton()
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview()
@@ -113,15 +114,17 @@ class Onboarding2Screen: UIView {
             view.topAnchor.constraint(equalTo: topAnchor),
             view.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            view.heightAnchor.constraint(equalToConstant: 530),
+            view.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -25),
             
             skipButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             skipButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-        
-            topImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            topImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 30),
             
-            titleLabel.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 22),
+            topImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
+            topImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 65),
+            topImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -65),
+            topImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            
+            titleLabel.topAnchor.constraint(equalTo: arrowButton.topAnchor, constant: -200),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 22),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
             
@@ -130,11 +133,10 @@ class Onboarding2Screen: UIView {
             subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
             
             arrowButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22),
-            arrowButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            arrowButton.topAnchor.constraint(equalTo: bottomAnchor, constant: -97),
             arrowButton.heightAnchor.constraint(equalToConstant: 44),
             arrowButton.widthAnchor.constraint(equalToConstant: 44),
-
+            
         ])
     }
-    
 }

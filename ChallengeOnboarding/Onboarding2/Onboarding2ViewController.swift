@@ -13,7 +13,7 @@ protocol Onboarding2ViewControllerProtocol: AnyObject {
 }
 
 class Onboarding2ViewController: UIViewController {
-
+    
     var screen: Onboarding2Screen?
     weak var delegate: Onboarding2ViewControllerProtocol?
     
@@ -21,7 +21,7 @@ class Onboarding2ViewController: UIViewController {
         screen = Onboarding2Screen()
         view = screen
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate = self
@@ -37,7 +37,7 @@ extension Onboarding2ViewController: Onboarding2ScreenProtocol {
     func actionArrowButton() {
         delegate?.actionOnBoarding2ArrowButton()
     }
-
+    
     func actionSkipButton() {
         delegate?.actionOnBoarding2SkipButton()
     }
